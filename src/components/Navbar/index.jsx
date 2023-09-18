@@ -87,7 +87,7 @@ const StyledNavbar = styled.nav`
       font-size: 24px;
 
       &::before {
-        content: "î˜‚";
+        content: "☰";
       }
     }
   }

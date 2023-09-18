@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { features } from "./constant";
+import { Container } from "../commonStyle";
 
 export function Hero() {
   return (
@@ -143,10 +144,4 @@ const StyledHero = styled.section`
     padding: 20px;
     display: flex;
   }
-`;
-
-const Container = styled.div`
-  width: 95%;
-  max-width: 1300px;
-  margin: 0 auto;
 `;

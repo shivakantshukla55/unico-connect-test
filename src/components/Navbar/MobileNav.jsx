@@ -116,7 +116,7 @@ const StyledNav = styled.div`
     display: flex;
     justify-content: space-between;
     &::after {
-      content: "î˜‚";
+      content: "∇";
     }
   }
 `;
