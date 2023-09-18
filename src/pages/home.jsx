@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
 
 export function Home() {
   return (
     <Container>
       <Navbar />
-      <div>hello world</div>
+      <Hero />
     </Container>
   );
 }

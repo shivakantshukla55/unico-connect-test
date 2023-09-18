@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
+/* @font-face {
+  font-family: "Inter Bold";
+  src: url("./assets/Inter-Bold-2.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+} */
+
 /* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -14,7 +25,7 @@ li {
 
 /* Set a base font size and family */
 body {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
