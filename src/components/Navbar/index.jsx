@@ -2,8 +2,12 @@ import { navItems } from "./constant";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { NavItem } from "./NavItem";
+import { useState } from "react";
+import { MobileNav } from "./MobileNav";
 
 export function Navbar() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   return (
     <StyledNavbar>
       <div className="container">
@@ -28,6 +32,14 @@ export function Navbar() {
             </li>
           </ul>
         ) : null}
+        <div className="hamburger-nav ham-nav">
+          <button onClick={() => setShowMobileMenu(true)} />
+        </div>
+
+        <MobileNav
+          showMobileMenu={showMobileMenu}
+          onClose={() => setShowMobileMenu(false)}
+        />
       </div>
     </StyledNavbar>
   );
@@ -60,6 +72,32 @@ const StyledNavbar = styled.nav`
   .links-container {
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .ham-nav {
+    button {
+      background: none;
+      border: none;
+      padding: 18px;
+      cursor: pointer;
+      font-size: 24px;
+
+      &::before {
+        content: "î˜‚";
+      }
+    }
+  }
+
+  .hamburger-nav {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   .get-in-touch {
