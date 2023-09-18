@@ -35,7 +35,7 @@ export function Services() {
   );
 }
 
-const StyledService = styled.div`
+const StyledService = styled.section`
   background: #ffffff;
   padding: 50px 0;
 
